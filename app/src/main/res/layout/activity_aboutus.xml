@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pro.network.yalu.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sans_bold"
+                android:padding="5dp"
+                android:text="ABOUT US"
+                android:visibility="gone"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sans_bold"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/sans"
+                android:padding="5dp"
+                android:text=" "
+                android:textColor="@color/gray"
+                android:textSize="16dp" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_baseline_phone_24"
+                    android:tint="#9C27B0" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="+91 98763 98776"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_baseline_mail_outline_24"
+                    android:tint="#9C27B0" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="inquiry@scrutinysoft.com"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@drawable/whatsapp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@drawable/twitter" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

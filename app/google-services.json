@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "44848711434",
+    "project_id": "tryme-mobiles",
+    "storage_bucket": "tryme-mobiles.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44848711434:android:5269b09890b58deffe9cf3",
+        "android_client_info": {
+          "package_name": "pro.tryme.network"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44848711434-4b44de9f29n527dcf6gcu0jst63bd9pd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAil5TNLt49TO-Ff3x82WdqyZ3bdX_WXr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44848711434-4b44de9f29n527dcf6gcu0jst63bd9pd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

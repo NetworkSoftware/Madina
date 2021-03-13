@@ -1,0 +1,2 @@
+include ':app',':moeidbannerlibrary',':bubblepagerindicator'
+rootProject.name = "TRY ME Mobiles"

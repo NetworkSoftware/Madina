@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TRYME MOBILES</string>
+    <string name="name">TRYME</string>
+    <string name="app_name_home">TRYME MOBILES</string>
+    <string name="submit">SUBMIT</string>
+    <string name="cancel">CANCEL</string>
+    <string name="locationPermissionAlert">Please Enable this permission to identify  your password and send to your mobile as SMS</string>
+        <string name="cart"> <u>Cart Summary</u></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="sign">Please,Sign in </string>
+    <string name="maps_api_key">AIzaSyBnXrCdH0lSK_ok2MpkAq6mN6GYmaioBOI</string>
+    <color name="colorTex">#585858</color>
+    <color name="colorSub">#b0afaf</color>
+    <color name="colordevider">#64dad8d8</color>
+</resources>
