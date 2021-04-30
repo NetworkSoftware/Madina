@@ -18,12 +18,12 @@
         android:title="My Orders" />
 
 
-    <item
+    <!--<item
         android:id="@+id/wishlistBottom"
         android:enabled="true"
         app:labelVisibilityMode="labeled"
         android:icon="@drawable/ic_baseline_favorite_border_24"
-        android:title="Wishlist" />
+        android:title="Wishlist" />-->
 
     <item
         android:id="@+id/profile"

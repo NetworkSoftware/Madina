@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pro.tryme.network">
+    package="pro.yalu.network">
 
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -9,14 +9,14 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="pro.tryme.network.app.AppController"
+        android:name="pro.yalu.network.app.AppController"
         android:allowBackup="true"
         android:largeHeap="true"
-        android:icon="@drawable/tryme_logo"
+        android:icon="@drawable/yalulogo"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@drawable/tryme_logo"
+        android:roundIcon="@drawable/yalulogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
@@ -36,7 +36,7 @@
             android:value="@string/maps_api_key" />
 
         <activity
-            android:name="pro.tryme.network.SplashActivity"
+            android:name="pro.yalu.network.SplashActivity"
             android:theme="@style/AppThemeNowhitesplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,44 +44,48 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+      <!--  <activity
+            android:name="pro.yalu.network.MainActivity"
+            android:theme="@style/AppThemeNowhitesplash" />-->
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppThemeNowhitesplash" />
+            android:name="pro.yalu.network.MainActivityYalu"
+            android:theme="@style/AppThemeNowhitemain" />
         <activity
-            android:name="pro.tryme.network.LoginActivity"
-            android:theme="@style/AppThemeSplash" />
-        <activity
-            android:name="pro.tryme.network.ChangePassword"
+            android:name="pro.yalu.network.ChangePassword"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name="pro.tryme.network.Registerpage"
-            android:theme="@style/AppTheme" />
+        <activity android:name=".ad.ActivityMediaOnline" />
 
         <activity
-            android:name="pro.tryme.network.cart.CartActivity"
+            android:name="pro.yalu.network.cart.CartActivity"
             android:label="Cart"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="pro.tryme.network.AllProductActivity"
+            android:name="pro.yalu.network.wishlist.WishListActivity"
+            android:label="WishList"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="pro.tryme.network.product.ProductActivity"
-            android:theme="@style/AppThemeBlack"/>
-        <activity
-            android:name="pro.tryme.network.product.BannerActivity"
-            android:theme="@style/AppThemeImage" />
+            android:name=".web.WebActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeMat" />
 
         <activity
-            android:name="pro.tryme.network.ImageZoomActivity"
+            android:name="pro.yalu.network.AllProductActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="pro.yalu.network.product.ProductActivity"
+            android:label="@string/app_name_home"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="pro.yalu.network.product.BannerActivity"
+            android:theme="@style/AppThemeSplash" />
+
+        <activity
+            android:name="pro.yalu.network.ImageZoomActivity"
             android:theme="@style/AppThemeNowhite" />
-
-        <meta-data
-            android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_7fnnn7WTaard4h" />
 
 
         <service
-            android:name="pro.tryme.network.app.FirebaseMessageReceiver"
+            android:name="pro.yalu.network.app.FirebaseMessageReceiver"
             android:exported="false"
             android:stopWithTask="false">
             <intent-filter>

@@ -1,2 +1,2 @@
-include ':app',':moeidbannerlibrary',':bubblepagerindicator'
-rootProject.name = "TRY ME Mobiles"
+include ':app',':moeidbannerlibrary',':bubblepagerindicator',":updatemanager"
+rootProject.name = "Yalu Mobiles"

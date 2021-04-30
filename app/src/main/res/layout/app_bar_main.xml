@@ -1,128 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/black"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/tryme_logo"/>
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
 
-          <TextView
-              android:layout_width="100dp"
-              android:layout_height="25dp"
-              android:text="TRYME"
-              android:includeFontPadding="false"
-              android:fontFamily="@font/ruach"
-              android:padding="0dp"
-              android:textColor="@color/colorPrimary"
-              android:textSize="23dp"/>
+            <ImageView
+
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/yalulogofinal"
+                android:visibility="visible" />
+
             <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sans"
+                android:gravity="left|center"
+                android:includeFontPadding="false"
+                android:lines="2"
+                android:text="YALU MOBILES"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="normal" />
+
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_search_24"
+                android:text="Basket"
+                app:tint="@color/white" />
+
+
+            <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="MOBILES"
-                android:includeFontPadding="false"
-                android:padding="0dp"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/ruach"
-                android:textColor="@color/white"
-                android:textSize="16dp"/>
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/wishlist"
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="start"
+                    android:src="@drawable/ic_baseline_favorite_border_24"
+                    android:text="Basket"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/wishListCount"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/badge"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    tools:text="11" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:id="@+id/profile"
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="start"
+                    android:src="@drawable/ic_outline_shopping_bag_24"
+                    android:text="Basket"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/basketCount"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/badge"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    tools:text="11" />
+            </FrameLayout>
+
+
         </LinearLayout>
 
 
-        <ImageView
-            android:id="@+id/search"
-            android:layout_width="25dp"
-            android:layout_height="35dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="45dp"
-            android:gravity="center"
-            android:src="@drawable/ic_baseline_search_24"
-            android:text="Basket"
-            app:tint="#ffff" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:id="@+id/profile"
-                android:layout_width="25dp"
-                android:layout_height="35dp"
-                android:layout_gravity="left"
-                android:layout_marginLeft="15dp"
-                android:gravity="start"
-                android:src="@drawable/ic_outline_shopping_bag_24"
-                android:text="Basket"
-                app:tint="#fff" />
-
-            <TextView
-                android:id="@+id/basketCount"
-                android:layout_width="17dp"
-                android:layout_height="17dp"
-                android:layout_gravity="center|left"
-                android:layout_marginLeft="32dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/badge"
-                android:backgroundTint="@color/colorAccent"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                android:visibility="visible"
-                tools:text="11" />
-        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>
 
 
-        <ImageView
-
-            android:id="@+id/bell"
-            android:layout_width="20dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="5dp"
-            android:contentDescription="menu icon"
-            android:src="@drawable/ic_loupe"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:tint="#B5B3B3"
-            tools:ignore="UnusedAttribute" />
-
-        <TextView
-            android:id="@+id/totalBudgetCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:text=""
-            android:textColor="#fff"
-            android:textSize="12sp"
-            android:textStyle="normal"
-            android:visibility="visible" />
-    </RelativeLayout>
-
-
-</androidx.appcompat.widget.Toolbar>

@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bubblepagerindicator" />
             <option value="$PROJECT_DIR$/moeidbannerlibrary" />
+            <option value="$PROJECT_DIR$/updatemanager" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

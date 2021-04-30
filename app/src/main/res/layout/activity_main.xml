@@ -27,17 +27,13 @@
             android:layout_marginBottom="52dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
             android:id="@+id/nav_view12"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:labelVisibilityMode="labeled"
-            android:background="@color/black"
-            android:theme="@style/NavigationTheme"
-            app:itemRippleColor="@color/orange"
-            app:itemIconTint="@drawable/tab_color"
-            app:menu="@menu/bottom_nav_menu" />
+            app:cnb_menuResource="@menu/bottom_nav_menu" />
+
 
     </RelativeLayout>
 

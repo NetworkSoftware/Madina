@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "44848711434",
-    "project_id": "tryme-mobiles",
-    "storage_bucket": "tryme-mobiles.appspot.com"
+    "project_number": "209591830454",
+    "project_id": "yalu-mobiles",
+    "storage_bucket": "yalu-mobiles.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:44848711434:android:5269b09890b58deffe9cf3",
+        "mobilesdk_app_id": "1:209591830454:android:6cfc467114e8e386886317",
         "android_client_info": {
-          "package_name": "pro.tryme.network"
+          "package_name": "pro.yalu.network"
         }
       },
       "oauth_client": [
         {
-          "client_id": "44848711434-4b44de9f29n527dcf6gcu0jst63bd9pd.apps.googleusercontent.com",
+          "client_id": "209591830454-0u5i14a13gvpbrrjbbm70nc4jca36idd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAil5TNLt49TO-Ff3x82WdqyZ3bdX_WXr4"
+          "current_key": "AIzaSyABAFsm9mRFi8ileC34vWJDmi142g3Bpjk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "44848711434-4b44de9f29n527dcf6gcu0jst63bd9pd.apps.googleusercontent.com",
+              "client_id": "209591830454-0u5i14a13gvpbrrjbbm70nc4jca36idd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

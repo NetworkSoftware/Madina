@@ -6,504 +6,67 @@
     android:layout_height="match_parent"
     android:background="#fff">
 
+
+
+
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:layout_height="wrap_content"
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <HorizontalScrollView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categories"
+                android:layout_above="@+id/scroll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
-                    android:orientation="horizontal">
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#9CEFE7"
-                        android:elevation="5dp">
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fff"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:id="@+id/mobiles"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:background="#fff"
-                                android:orientation="vertical"
-                                android:tag="New Mobiles">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/banner"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="55dp"
-                                        android:layout_height="55dp"
-                                        android:layout_gravity="center"
-                                        android:layout_marginTop="5dp"
-                                        android:src="@drawable/ph" />
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:text="New Mobiles"
-                                    android:minLines="2"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/oldmobiles"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="Lite Used Mobiles">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannerfour"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="51dp"
-                                        android:layout_height="55dp"
-                                        android:layout_gravity="center"
-                                        android:layout_marginTop="5dp"
-                                        android:src="@drawable/olds" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:gravity="center"
-                                    android:text="Lite Used Mobiles"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/tablet"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="Tablet">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannertv"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
-                                        android:layout_gravity="center"
-                                        android:layout_marginTop="5dp"
-                                        android:src="@drawable/tablet" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:minLines="2"
-                                    android:text="Tablet"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/smartwatches"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="Smart watches">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannersix"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="55dp"
-                                        android:layout_height="65dp"
-                                        android:layout_gravity="center"
-                                        android:layout_margin="1dp"
-                                        android:src="@drawable/wat" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:minLines="2"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:text="Smart watches"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/headphone"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="Headphones">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannerfive"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="38dp"
-                                        android:layout_height="55dp"
-                                        android:layout_gravity="center"
-                                        android:layout_marginTop="4dp"
-                                        android:src="@drawable/headph" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:minLines="2"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:text="Headphones"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/laptops"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="Laptops">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannerlab"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="65dp"
-                                        android:layout_height="65dp"
-                                        android:layout_gravity="center"
-                                        android:src="@drawable/labtops" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:minLines="2"
-                                    android:text="Laptops"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/tv"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="TV">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannertv"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="55dp"
-                                        android:layout_height="55dp"
-                                        android:layout_gravity="center"
-                                        android:layout_marginTop="10dp"
-                                        android:src="@drawable/tv" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:minLines="2"
-                                    android:text="TV"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/cameraandLens"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="Camera and Lens">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannercamera"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="55dp"
-                                        android:layout_height="55dp"
-                                        android:layout_gravity="center"
-                                        android:layout_marginTop="10dp"
-                                        android:src="@drawable/camera" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:minLines="2"
-                                    android:gravity="center"
-                                    android:layout_gravity="center"
-                                    android:text="Camera and Lens"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/tshirts"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="T-shirts">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannerdress"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="47dp"
-                                        android:layout_gravity="center"
-                                        android:layout_marginTop="10dp"
-                                        android:src="@drawable/tshirt" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:minLines="2"
-                                    android:text="T-shirts"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/ac"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="AC">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannerac"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_gravity="center"
-                                        android:layout_marginTop="10dp"
-                                        android:src="@drawable/ac" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:minLines="2"
-                                    android:text="AC"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/service"
-                                android:layout_width="80dp"
-                                android:layout_height="100dp"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:tag="Service">
-
-                                <LinearLayout
-                                    android:layout_width="65dp"
-                                    android:layout_height="65dp"
-                                    android:background="@drawable/bannertv"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_gravity="center"
-                                        android:layout_marginTop="10dp"
-                                        android:src="@drawable/ser" />
-
-
-                                </LinearLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/sans"
-                                    android:minLines="2"
-                                    android:text="Service"
-                                    android:textColor="@color/black"
-                                    android:textSize="12dp" />
-
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
-            </HorizontalScrollView>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:elevation="8dp"
-                app:cardCornerRadius="5dp">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rec_all_offers"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#E9F6F5"
-                    android:scrollbars="vertical" />
-
-            </androidx.cardview.widget.CardView>
-
-
+                android:layout_margin="5dp" />
             <com.network.moeidbannerlibrary.banner.BannerLayout
                 android:id="@+id/Banner"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="3dp"
                 android:textAlignment="center"
                 app:autoPlaying="true"
-                app:centerScale="1"
-                app:itemSpace="0"
-                app:moveSpeed="0.2"
-                app:showIndicator="true">
-
-            </com.network.moeidbannerlibrary.banner.BannerLayout>
-
+                app:centerScale="1.1"
+                app:itemSpace="50"
+                app:moveSpeed="0.5"
+                app:showIndicator="true"/>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:text="More Stories"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="19dp" />
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#FF5722" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        <!--    <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -518,8 +81,8 @@
                 android:id="@+id/recycler_product"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp" />
-
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="10dp" />-->
 
 
         </LinearLayout>
@@ -529,12 +92,13 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        app:cardCornerRadius="5dp"
-        android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
-        android:background="#ECEAEA">
+        android:background="#ECEAEA"
+        android:visibility="gone"
+        app:cardCornerRadius="5dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="110dp"
@@ -542,13 +106,13 @@
             android:orientation="vertical">
 
 
-    <fragment
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_margin="10dp"
-        tools:context=".MainActivity" />
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                tools:context=".MainActivityYalu" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

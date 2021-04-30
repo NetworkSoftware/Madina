@@ -9,6 +9,26 @@
     android:orientation="vertical">
 
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:text="Feedback"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="19dp" />
+
+    <View
+        android:layout_width="35dp"
+        android:layout_height="5dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorPrimary" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/feedbackText"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

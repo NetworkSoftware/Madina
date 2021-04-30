@@ -48,7 +48,6 @@ public class BaseBannerAdapter extends RecyclerView.Adapter<BaseBannerAdapter.Mz
         final BannerBean bannerBean = urlList.get(P);
         ImageView img = (ImageView) holder.imageView;
         String resizedPath = Utils.getResizedImage(bannerBean.getImages(), true);
-        Log.e("xxxxx", resizedPath);
         Glide.with(context).load(resizedPath).into(img);
         img.setOnClickListener(new View.OnClickListener() {
             @Override
