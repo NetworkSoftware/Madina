@@ -132,6 +132,7 @@ public class AllProductActivity extends BaseActivity implements ProductItemClick
                             productListBean.setImage(jsonObject.getString("image"));
                             productListBean.setDescription(jsonObject.getString("description"));
                             productListBean.setStock_update(jsonObject.getString("stock_update"));
+                            productListBean.setCreatedOn(jsonObject.getString("createdon"));
                             subCategories.add(productListBean.getBrand().toUpperCase());
                             permanantList.add(productListBean);
                             productList.add(productListBean);

@@ -68,7 +68,7 @@ public class ProductActivity extends BaseActivity implements ViewClick {
     private RecyclerView baseList;
     private AttachmentViewAdapter attachmentBaseAdapter;
 
-    private TextView basketCount, wishlistBadge;
+    private TextView basketCount, wishlistBadge,createdon;
     DbWishList dbWishList;
 
     LikeButton wish_button;
@@ -107,7 +107,8 @@ public class ProductActivity extends BaseActivity implements ViewClick {
         });
         product_name = findViewById(R.id.product_name);
 
-
+        createdon = findViewById(R.id.createdon);
+        createdon.setText(AppConfig.date2DayTime(productBean.getCreatedOn()));
         chat = findViewById(R.id.chat);
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -344,5 +345,7 @@ public class ProductActivity extends BaseActivity implements ViewClick {
 
         return true;
     }
+
+
 
 }

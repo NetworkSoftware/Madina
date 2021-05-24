@@ -76,7 +76,7 @@ public class ProductListBean implements Serializable {
     public String description;
     public String qty;
     public String stock_update;
-
+    public String createdOn;
 
     public ProductListBean() {
     }
@@ -282,5 +282,13 @@ public class ProductListBean implements Serializable {
 
     public void setWish(String wish) {
         this.wish = wish;
+    }
+
+    public String getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(String createdOn) {
+        this.createdOn = createdOn;
     }
 }

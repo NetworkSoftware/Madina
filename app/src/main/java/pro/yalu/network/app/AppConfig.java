@@ -18,23 +18,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class AppConfig {
 
-    public static DecimalFormat decimalFormat = new DecimalFormat("0");
-
     public static final String isLogin = "isLoginKey";
     public static final String userId = "userId";
     public static final String phone = "phone";
     public static final String skipKey = "skipKey";
-
     public static final String name = "nameKey";
-
     public static final String mypreference = "mypref";
-
-
     //TRYME Mobiles_NetworkSoftware
     public static final String ip = "http://thestockbazaar.com/admin/e-commerce/yalu_mobile";
     public static final String configKey = "configKey";
@@ -46,25 +43,20 @@ public class AppConfig {
     public static final String loginis = "true";
     public static final String termsNo = "termsNoKey";
     public static final String termsValue = "termsValueKey";
-
     //login and Register
     public static final String REGISTER_USER = ip + "/user_register.php";
     public static final String LOGIN_USER = ip + "/user_login.php";
     public static final String CHANGE_PASSWORD = ip + "/change_password.php";
-
     //Product
     public static final String PRODUCT_GET_ALL = ip + "/dataFetchAll.php";
     //Banner
     public static final String BANNERS_GET_ALL = ip + "/dataFetchAll_banner.php";
-
     //Order
     public static final String ORDER_GET_ALL = ip + "/dataFetchAll_order.php";
     public static final String ORDER_CREATE = ip + "/create_order.php";
-
-    public static final String ALL_AD = ip+"/get_all_feed.php";
-
-
+    public static final String ALL_AD = ip + "/get_all_feed.php";
     public static final String FEEDBACk_CREATE = ip + "/create_feedback.php";
+    public static DecimalFormat decimalFormat = new DecimalFormat("0");
 
     public static void openPdfFile(Context context, String name) {
         File fileBrochure = new File(Environment.getExternalStorageDirectory() + "/" + name);
@@ -91,7 +83,7 @@ public class AppConfig {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNo, null, msg, null, null);
         } catch (Exception ex) {
-            Toast.makeText(context, ex.getMessage().toString(),
+            Toast.makeText(context, ex.getMessage(),
                     Toast.LENGTH_LONG).show();
             ex.printStackTrace();
         }
@@ -166,18 +158,54 @@ public class AppConfig {
 
     public static String getResizedImage(String path, boolean isResized) {
         if (isResized) {
-            return IMAGE_URL+"small/"+path.substring(path.lastIndexOf("/")+1);
+            return IMAGE_URL + "small/" + path.substring(path.lastIndexOf("/") + 1);
         }
         return path;
     }
-    public static DefaultRetryPolicy getTimeOut(){
+
+    public static DefaultRetryPolicy getTimeOut() {
         return new DefaultRetryPolicy(
                 50000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
     }
 
+    public static String date2DayTime(String dateOld) {
 
+        Date newTime = new Date();
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Date oldTime = format.parse(dateOld);
+            SimpleDateFormat format2 = new SimpleDateFormat("MMM dd");
+            dateOld=format2.format(oldTime);
+
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(newTime);
+            Calendar oldCal = Calendar.getInstance();
+            oldCal.setTime(oldTime);
+
+            int oldYear = oldCal.get(Calendar.YEAR);
+            int year = cal.get(Calendar.YEAR);
+            int oldDay = oldCal.get(Calendar.DAY_OF_YEAR);
+            int day = cal.get(Calendar.DAY_OF_YEAR);
+
+            if (oldYear == year) {
+                int value = oldDay - day;
+                if (value == -1) {
+                    return "Yesterday";
+                } else if (value == 0) {
+                    return "Today";
+                } else if (value == 1) {
+                    return "Tomorrow";
+                } else {
+                    return dateOld;
+                }
+            }
+        } catch (Exception e) {
+
+        }
+        return dateOld;
+    }
 }
 
 

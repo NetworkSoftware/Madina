@@ -1,21 +1,15 @@
 package pro.yalu.network.product;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
-import pro.yalu.network.R;
-import pro.yalu.network.app.AppConfig;
-import pro.yalu.network.app.DbWishList;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
@@ -26,36 +20,20 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+import pro.yalu.network.R;
+import pro.yalu.network.app.AppConfig;
+import pro.yalu.network.app.DbWishList;
+
 
 public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.MyViewHolder> {
 
-    private Context mainActivityUser;
-    private List<ProductListBean> productBeans;
-    SharedPreferences preferences;
     public ProductItemClick productItemClick;
+    SharedPreferences preferences;
     int selectedPosition = 0;
     DbWishList dbWishList;
     SharedPreferences sharedpreferences;
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-
-        private final View outOfStock;
-        private ImageView product_image;
-        private TextView product_name, product_price, product_descrpition;
-        CardView product_card;
-        LikeButton wish_button;
-
-        public MyViewHolder(View view) {
-            super((view));
-            product_card =  view.findViewById(R.id.product_card);
-            product_image = (ImageView) view.findViewById(R.id.product_image);
-            wish_button = view.findViewById(R.id.wish_button);
-            product_name = (TextView) view.findViewById(R.id.product_name);
-            product_price = (TextView) view.findViewById(R.id.product_price);
-            outOfStock = view.findViewById(R.id.outOfStock);
-            product_descrpition = view.findViewById(R.id.product_descrpition);
-        }
-    }
+    private final Context mainActivityUser;
+    private List<ProductListBean> productBeans;
 
     public ProductListAdapter(Context mainActivityUser, List<ProductListBean> productBeans, ProductItemClick productItemClick, SharedPreferences sharedPreferences) {
         this.mainActivityUser = mainActivityUser;
@@ -64,7 +42,6 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         sharedpreferences = mainActivityUser.getSharedPreferences(AppConfig.mypreference, Context.MODE_PRIVATE);
         dbWishList = new DbWishList(mainActivityUser);
     }
-
 
     public void notifyData(List<ProductListBean> productBeans) {
         this.productBeans = productBeans;
@@ -108,6 +85,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
             }
         });
 
+        holder.createdon.setText(AppConfig.date2DayTime(productBean.getCreatedOn()));
 
         if (productBean.getStock_update().equalsIgnoreCase("In Stock")) {
             holder.outOfStock.setVisibility(View.GONE);
@@ -121,11 +99,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
             }
         });
 
-        if (dbWishList.isInWishList(productBean.id, sharedpreferences.getString(AppConfig.user_id, ""))) {
-            holder.wish_button.setLiked(true);
-        } else {
-            holder.wish_button.setLiked(false);
-        }
+        holder.wish_button.setLiked(dbWishList.isInWishList(productBean.id, sharedpreferences.getString(AppConfig.user_id, "")));
 
         holder.product_card.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,6 +113,30 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
 
     public int getItemCount() {
         return productBeans.size();
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+
+        private final View outOfStock;
+        CardView product_card;
+        LikeButton wish_button;
+        private final ImageView product_image;
+        private final TextView product_name;
+        private final TextView product_price;
+        private final TextView product_descrpition;
+        private final TextView createdon;
+
+        public MyViewHolder(View view) {
+            super((view));
+            product_card = view.findViewById(R.id.product_card);
+            product_image = (ImageView) view.findViewById(R.id.product_image);
+            wish_button = view.findViewById(R.id.wish_button);
+            product_name = (TextView) view.findViewById(R.id.product_name);
+            product_price = (TextView) view.findViewById(R.id.product_price);
+            outOfStock = view.findViewById(R.id.outOfStock);
+            createdon = view.findViewById(R.id.createdon);
+            product_descrpition = view.findViewById(R.id.product_descrpition);
+        }
     }
 
 }
