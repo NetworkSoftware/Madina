@@ -163,13 +163,13 @@ public class AboutusActivity extends BaseFragment implements OnAboutListener {
     private void openWhatsApp() {
         try {
             Intent intent6 = new Intent(Intent.ACTION_VIEW);
-            intent6.setData(Uri.parse("http://api.whatsapp.com/send?phone=917010135419"
+            intent6.setData(Uri.parse("http://api.whatsapp.com/send?phone=919500413999"
                     + "&text=" + "Hi YALU Mobiles"));
             intent6.setPackage("com.whatsapp.w4b");
             startActivity(intent6);
         } catch (ActivityNotFoundException e) {
             Intent intent6 = new Intent(Intent.ACTION_VIEW);
-            intent6.setData(Uri.parse("http://api.whatsapp.com/send?phone=917010135419"
+            intent6.setData(Uri.parse("http://api.whatsapp.com/send?phone=919500413999"
                     + "&text=" + "Hi YALU Mobiles"));
             intent6.setPackage("com.whatsapp");
             startActivity(intent6);
@@ -365,7 +365,7 @@ public class AboutusActivity extends BaseFragment implements OnAboutListener {
 
     private void doCall() {
         Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:7010135419"));
+        intent.setData(Uri.parse("tel:9500413999"));
         startActivity(intent);
     }
 

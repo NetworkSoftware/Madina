@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.os.StrictMode;
 import android.view.Menu;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -101,7 +103,7 @@ public class ProductActivity extends BaseActivity implements ViewClick {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:7010135419"));
+                intent.setData(Uri.parse("tel:9500413999"));
                 startActivity(intent);
             }
         });
@@ -116,13 +118,13 @@ public class ProductActivity extends BaseActivity implements ViewClick {
 
                 try {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=917010135419"
+                    intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=919500413999"
                             + "&text=" + "Hi YALU MOBILES, I would like buy this *" + product_name.getText().toString() + "* product"));
                     intent.setPackage("com.whatsapp.w4b");
                     startActivity(intent);
                 } catch (ActivityNotFoundException e) {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=917010135419"
+                    intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=919500413999"
                             + "&text=" + "Hi YALU MOBILES, I would like buy this *" + product_name.getText().toString() + "* product"));
                     intent.setPackage("com.whatsapp");
                     startActivity(intent);
@@ -232,11 +234,12 @@ public class ProductActivity extends BaseActivity implements ViewClick {
                         != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(ProductActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
                 } else if (productBean != null && urls != null && urls.size() > 0) {
-                    Uri bitmap = getLocalBitmapUri(urls.get(0));
+                    Uri bitmap = getLocalBitmapUri(urls.get(0), ProductActivity.this);
                     if (bitmap != null) {
                         Intent intent = new Intent(android.content.Intent.ACTION_SEND);
                         intent.putExtra(Intent.EXTRA_STREAM, bitmap);
-                        intent.putExtra(Intent.EXTRA_TEXT, productBean.getBrand() + productBean.getModel() + "\nVisit more products like this\nhttps://play.google.com/store/apps/details?id=pro.yalu.network");
+                        intent.putExtra(Intent.EXTRA_TEXT, productBean.getBrand()+
+                                " "+productBean.getModel() + "\nVisit more products like this\nhttps://play.google.com/store/apps/details?id=pro.yalu.network");
                         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                         intent.setType("image/png");
                         startActivity(intent);
@@ -286,7 +289,7 @@ public class ProductActivity extends BaseActivity implements ViewClick {
         }
     }
 
-    public Uri getLocalBitmapUri(String urlL) {
+    public Uri getLocalBitmapUri(String urlL, Context context) {
         // Extract Bitmap from ImageView drawable
         Uri bmpUri = null;
         try {
@@ -294,13 +297,17 @@ public class ProductActivity extends BaseActivity implements ViewClick {
             Bitmap image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
 
             // Store image to default external storage directory
-            File file = new File(Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_DOWNLOADS), "product_image" + ".png");
+            File file = new File(getExternalCacheDir().getPath(), "product_image" + ".png");
             file.getParentFile().mkdirs();
             FileOutputStream out = new FileOutputStream(file);
             image.compress(Bitmap.CompressFormat.PNG, 90, out);
             out.close();
-            bmpUri = Uri.fromFile(file);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                bmpUri = FileProvider.getUriForFile(context,
+                        getPackageName() + ".provider", file);
+            } else {
+                bmpUri = Uri.fromFile(file);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

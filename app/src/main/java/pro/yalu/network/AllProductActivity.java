@@ -49,25 +49,21 @@ import pro.yalu.network.product.ProductListBean;
 public class AllProductActivity extends BaseActivity implements ProductItemClick, OnChip {
 
     ProgressDialog pDialog;
-    private String TAG = getClass().getSimpleName();
-
-    private DatabaseHelperYalu db;
-
     RecyclerView recycler_product;
-    private List<ProductListBean> productList = new ArrayList<>();
-    private List<ProductListBean> permanantList = new ArrayList<>();
     ProductListAdapter productListAdapter;
-
     SharedPreferences sharedpreferences;
     CartActivity.OnCartItemChange onCartItemChange;
+    RecyclerView recycler_chips;
+    private final String TAG = getClass().getSimpleName();
+    private DatabaseHelperYalu db;
+    private List<ProductListBean> productList = new ArrayList<>();
+    private final List<ProductListBean> permanantList = new ArrayList<>();
     private SearchView searchView;
     private TextView cart_badge;
     private Set<String> subCategories = new HashSet<>();
-
-    RecyclerView recycler_chips;
-    ChipAdapter chipAdapter;
     private ArrayList<ChipBean> chipBeans = new ArrayList<>();
     private String selectedType = "ALL";
+    ChipAdapter chipAdapter;
 
     @Override
     protected void startDemo() {
@@ -112,7 +108,7 @@ public class AllProductActivity extends BaseActivity implements ProductItemClick
                 AppConfig.PRODUCT_GET_ALL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d("Register Response: ", response.toString());
+                Log.d("Register Response: ", response);
                 try {
                     JSONObject jObj = new JSONObject(response);
                     int success = jObj.getInt("success");
@@ -145,10 +141,11 @@ public class AllProductActivity extends BaseActivity implements ProductItemClick
                                 chipBeans.add(new ChipBean(e));
                             }
                             chipAdapter.notifyData(chipBeans);
+                            selectedType = "ALL";
+                            getSupportActionBar().setSubtitle(selectedType);
+                            chipAdapter.notifyData(selectedType);
                         }
-                        selectedType = "ALL";
-                        getSupportActionBar().setSubtitle(selectedType);
-                        chipAdapter.notifyData(selectedType);
+
                     } else {
                         Toast.makeText(getApplication(), jObj.getString("message"), Toast.LENGTH_SHORT).show();
                     }
@@ -174,6 +171,9 @@ public class AllProductActivity extends BaseActivity implements ProductItemClick
                 String type = getIntent().getStringExtra("type");
                 if (type != null) {
                     localHashMap.put("category", type);
+                }
+                if (selectedType != null && !selectedType.equalsIgnoreCase("All")) {
+                    localHashMap.put("scategory", selectedType);
                 }
                 return localHashMap;
             }

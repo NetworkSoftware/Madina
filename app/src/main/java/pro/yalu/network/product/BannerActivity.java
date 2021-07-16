@@ -67,13 +67,13 @@ public class BannerActivity extends BaseActivity {
                         getCallingActivity().getPackageName().equals("pro.yalu.network")) {
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=917010135419"
+                        intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=919500413999"
                                 + "&text=" + "Hi YALU MOBILES, I would like buy this *" + getIntent().getStringExtra("description") + "* product"));
                         intent.setPackage("com.whatsapp.w4b");
                         startActivity(intent);
                     } catch (ActivityNotFoundException e) {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=917010135419"
+                        intent.setData(Uri.parse("http://api.whatsapp.com/send?phone=919500413999"
                                 + "&text=" + "Hi YALU MOBILES, I would like buy this *" + getIntent().getStringExtra("description") + "* product"));
                         intent.setPackage("com.whatsapp");
                         startActivity(intent);

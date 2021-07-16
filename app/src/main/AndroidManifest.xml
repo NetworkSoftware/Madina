@@ -82,7 +82,15 @@
         <activity
             android:name="pro.yalu.network.ImageZoomActivity"
             android:theme="@style/AppThemeNowhite" />
-
+        <provider
+            android:name="pro.yalu.network.app.GenericFileProvider"
+            android:authorities="pro.yalu.network.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
 
         <service
             android:name="pro.yalu.network.app.FirebaseMessageReceiver"
