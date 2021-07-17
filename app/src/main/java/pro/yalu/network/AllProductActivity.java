@@ -48,7 +48,6 @@ import pro.yalu.network.product.ProductListBean;
 
 public class AllProductActivity extends BaseActivity implements ProductItemClick, OnChip {
 
-    ProgressDialog pDialog;
     RecyclerView recycler_product;
     ProductListAdapter productListAdapter;
     SharedPreferences sharedpreferences;
@@ -68,8 +67,7 @@ public class AllProductActivity extends BaseActivity implements ProductItemClick
     @Override
     protected void startDemo() {
         setContentView(R.layout.activity_all_product);
-        pDialog = new ProgressDialog(getApplicationContext());
-        pDialog.setCancelable(false);
+
         sharedpreferences = getApplicationContext().getSharedPreferences(AppConfig.mypreference, Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = sharedpreferences.edit();
         edit.putString(AppConfig.userId, sharedpreferences.getString(AppConfig.user_id, ""));
@@ -103,11 +101,13 @@ public class AllProductActivity extends BaseActivity implements ProductItemClick
 
     private void fetchProductList(final String searchKey) {
         String tag_string_req = "req_register";
-        // showDialog();
+        pDialog.setMessage("Loading...");
+        showDialog();
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 AppConfig.PRODUCT_GET_ALL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                hideDialog();
                 Log.d("Register Response: ", response);
                 try {
                     JSONObject jObj = new JSONObject(response);
@@ -161,6 +161,7 @@ public class AllProductActivity extends BaseActivity implements ProductItemClick
 
             @Override
             public void onErrorResponse(VolleyError error) {
+                hideDialog();
                 Toast.makeText(getApplication(),
                         "Some Network Error.Try after some time", Toast.LENGTH_LONG).show();
             }
