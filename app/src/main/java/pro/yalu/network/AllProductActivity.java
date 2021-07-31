@@ -137,8 +137,11 @@ public class AllProductActivity extends BaseActivity implements ProductItemClick
                         if (chipBeans.size() <= 0) {
                             chipBeans = new ArrayList<>();
                             chipBeans.add(new ChipBean("ALL"));
+                            chipBeans.add(new ChipBean("IPHONE"));
                             for (String e : subCategories) {
-                                chipBeans.add(new ChipBean(e));
+                                if(!e.equalsIgnoreCase("IPHONE")) {
+                                    chipBeans.add(new ChipBean(e));
+                                }
                             }
                             chipAdapter.notifyData(chipBeans);
                             selectedType = "ALL";
