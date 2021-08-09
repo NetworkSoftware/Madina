@@ -9,8 +9,8 @@ android {
         applicationId "pro.yalu.network"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 13
-        versionName "1.0.13"
+        versionCode 15
+        versionName "1.0.15"
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
