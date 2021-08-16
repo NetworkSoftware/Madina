@@ -11,12 +11,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
@@ -25,8 +31,7 @@
                 android:layout_height="35dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="4dp"
-                android:src="@drawable/yalulogofinal"
+                android:src="@drawable/madina"
                 android:visibility="visible" />
 
             <TextView
@@ -34,14 +39,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/sans"
                 android:gravity="left|center"
                 android:includeFontPadding="false"
                 android:lines="2"
-                android:text="YALU MOBILES"
+                android:text="@string/app_name_home"
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 android:textStyle="normal" />
@@ -62,52 +66,16 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginTop="10dp">
-
-                <ImageView
-                    android:id="@+id/wishlist"
-                    android:layout_width="25dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="left"
-                    android:layout_marginLeft="15dp"
-                    android:gravity="start"
-                    android:src="@drawable/ic_baseline_favorite_border_24"
-                    android:text="Basket"
-                    app:tint="@color/white" />
-
-                <TextView
-                    android:id="@+id/wishListCount"
-                    android:layout_width="17dp"
-                    android:layout_height="17dp"
-                    android:layout_gravity="center|left"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/badge"
-                    android:backgroundTint="@color/white"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:visibility="visible"
-                    tools:text="11" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp">
 
                 <ImageView
-                    android:id="@+id/profile"
+                    android:id="@+id/cart"
                     android:layout_width="25dp"
                     android:layout_height="35dp"
                     android:layout_gravity="left"
                     android:layout_marginLeft="15dp"
                     android:gravity="start"
-                    android:src="@drawable/ic_outline_shopping_bag_24"
+                    android:src="@drawable/ic_outline_shopping_cart_24"
                     android:text="Basket"
                     app:tint="@color/white" />
 

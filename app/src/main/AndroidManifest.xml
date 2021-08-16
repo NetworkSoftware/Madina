@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pro.yalu.network">
+    package="pro.network.madina">
 
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -9,14 +9,14 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="pro.yalu.network.app.AppController"
+        android:name="pro.network.madina.app.AppController"
         android:allowBackup="true"
         android:largeHeap="true"
-        android:icon="@drawable/yalulogo"
+        android:icon="@drawable/madina"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@drawable/yalulogo"
+        android:roundIcon="@drawable/madina"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
@@ -36,7 +36,7 @@
             android:value="@string/maps_api_key" />
 
         <activity
-            android:name="pro.yalu.network.SplashActivity"
+            android:name="pro.network.madina.SplashActivity"
             android:theme="@style/AppThemeNowhitesplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,47 +44,47 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="pro.network.madina.MainActivity"
+            android:theme="@style/AppThemeNowhitesplash" />
       <!--  <activity
-            android:name="pro.yalu.network.MainActivity"
-            android:theme="@style/AppThemeNowhitesplash" />-->
+            android:name="pro.network.madina.MainActivity"
+            android:theme="@style/AppThemeNowhitemain" />-->
         <activity
-            android:name="pro.yalu.network.MainActivityYalu"
-            android:theme="@style/AppThemeNowhitemain" />
-        <activity
-            android:name="pro.yalu.network.ChangePassword"
+            android:name="pro.network.madina.ChangePassword"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ad.ActivityMediaOnline" />
+        <activity android:name="pro.network.madina.ad.ActivityMediaOnline" />
 
         <activity
-            android:name="pro.yalu.network.cart.CartActivity"
+            android:name="pro.network.madina.cart.CartActivity"
             android:label="Cart"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name="pro.yalu.network.wishlist.WishListActivity"
+     <!--   <activity
+            android:name="pro.network.madina.wishlist.WishListActivity"
             android:label="WishList"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme" />-->
         <activity
-            android:name=".web.WebActivity"
+            android:name="pro.network.madina.web.WebActivity"
             android:label="@string/app_name"
             android:theme="@style/AppThemeMat" />
 
         <activity
-            android:name="pro.yalu.network.AllProductActivity"
+            android:name="pro.network.madina.AllProductActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="pro.yalu.network.product.ProductActivity"
+            android:name="pro.network.madina.product.ProductActivity"
             android:label="@string/app_name_home"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name="pro.yalu.network.product.BannerActivity"
+            android:name="pro.network.madina.product.BannerActivity"
             android:theme="@style/AppThemeSplash" />
 
         <activity
-            android:name="pro.yalu.network.ImageZoomActivity"
+            android:name="pro.network.madina.ImageZoomActivity"
             android:theme="@style/AppThemeNowhite" />
         <provider
-            android:name="pro.yalu.network.app.GenericFileProvider"
-            android:authorities="pro.yalu.network.provider"
+            android:name="pro.network.madina.app.GenericFileProvider"
+            android:authorities="pro.network.madina.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -93,7 +93,7 @@
         </provider>
 
         <service
-            android:name="pro.yalu.network.app.FirebaseMessageReceiver"
+            android:name="pro.network.madina.app.FirebaseMessageReceiver"
             android:exported="false"
             android:stopWithTask="false">
             <intent-filter>

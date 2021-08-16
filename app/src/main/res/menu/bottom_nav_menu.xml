@@ -18,12 +18,19 @@
         android:title="My Orders" />
 
 
-    <!--<item
-        android:id="@+id/wishlistBottom"
+    <item
+       android:id="@+id/wishlistBottom"
         android:enabled="true"
         app:labelVisibilityMode="labeled"
         android:icon="@drawable/ic_baseline_favorite_border_24"
-        android:title="Wishlist" />-->
+        android:title="Wishlist" />
+
+    <item
+        android:id="@+id/map"
+        android:enabled="true"
+        app:labelVisibilityMode="labeled"
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:title="Location" />
 
     <item
         android:id="@+id/profile"
@@ -32,11 +39,6 @@
         android:icon="@drawable/ic_baseline_person_outline_24"
         android:title="Profile" />
 
-    <item
-        android:id="@+id/map"
-        android:enabled="true"
-        app:labelVisibilityMode="labeled"
-        android:icon="@drawable/ic_baseline_location_on_24"
-        android:title="Location" />
+
 
 </menu>

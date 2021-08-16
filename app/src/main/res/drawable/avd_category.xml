@@ -1,0 +1,20 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:name="path"
+                android:fillColor="#000000"
+                android:pathData="M 19.5 3.5 L 18 2 L 16.5 3.5 L 15 2 L 13.5 3.5 L 12 2 L 10.5 3.5 L 9 2 L 7.5 3.5 L 6 2 L 4.5 3.5 L 3 2 L 3 22 L 4.5 20.5 L 6 22 L 7.5 20.5 L 9 22 L 10.5 20.5 L 12 22 L 13.5 20.5 L 15 22 L 16.5 20.5 L 18 22 L 19.5 20.5 L 21 22 L 21 2 L 19.5 3.5 Z M 19 19.09 L 5 19.09 L 5 4.91 L 19 4.91 L 19 19.09 Z M 6 15 L 18 15 L 18 17 L 6 17 Z M 6 11 L 18 11 L 18 13 L 6 13 Z M 6 7 L 18 7 L 18 9 L 6 9 Z"/>
+            <clip-path
+                android:name="path_1"
+                android:pathData="M 19.5 3.5 L 18 2 L 16.5 3.5 L 15 2 L 13.5 3.5 L 12 2 L 10.5 3.5 L 9 2 L 7.5 3.5 L 6 2 L 4.5 3.5 L 3 2 L 3 22 L 4.5 20.5 L 6 22 L 7.5 20.5 L 9 22 L 10.5 20.5 L 12 22 L 13.5 20.5 L 15 22 L 16.5 20.5 L 18 22 L 19.5 20.5 L 21 22 L 21 2 L 19.5 3.5 Z M 19 19.09 L 5 19.09 L 5 4.91 L 19 4.91 L 19 19.09 Z M 6 15 L 18 15 L 18 17 L 6 17 Z M 6 11 L 18 11 L 18 13 L 6 13 Z M 6 7 L 18 7 L 18 9 L 6 9 Z"/>
+        </vector>
+    </aapt:attr>
+</animated-vector>

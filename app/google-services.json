@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "209591830454",
-    "project_id": "yalu-mobiles",
-    "storage_bucket": "yalu-mobiles.appspot.com"
+    "project_number": "649672294841",
+    "project_id": "madina-f98fc",
+    "storage_bucket": "madina-f98fc.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:209591830454:android:6cfc467114e8e386886317",
+        "mobilesdk_app_id": "1:649672294841:android:3ffbd146a21d5cb8e0b668",
         "android_client_info": {
-          "package_name": "pro.yalu.network"
+          "package_name": "pro.network.madina"
         }
       },
       "oauth_client": [
         {
-          "client_id": "209591830454-0u5i14a13gvpbrrjbbm70nc4jca36idd.apps.googleusercontent.com",
+          "client_id": "649672294841-76n0n3cmqov2mcv9m364tligl42onst6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyABAFsm9mRFi8ileC34vWJDmi142g3Bpjk"
+          "current_key": "AIzaSyCj9CXhrqz5C5K8lE2GGCSe3erNuobBtoI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "209591830454-0u5i14a13gvpbrrjbbm70nc4jca36idd.apps.googleusercontent.com",
+              "client_id": "649672294841-76n0n3cmqov2mcv9m364tligl42onst6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

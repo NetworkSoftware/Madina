@@ -30,7 +30,7 @@
                 android:visibility="visible"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/yalulogo" />
+                android:src="@drawable/madina" />
 
             <TextView
                 android:id="@+id/tv_header_name"

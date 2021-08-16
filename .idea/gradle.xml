@@ -11,14 +11,15 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Madina" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bubblepagerindicator" />
+            <option value="$PROJECT_DIR$/curved_bottom_navigation" />
             <option value="$PROJECT_DIR$/moeidbannerlibrary" />
             <option value="$PROJECT_DIR$/updatemanager" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

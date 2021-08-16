@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:tint="@color/white"
-        android:src="@drawable/ic_outline_shopping_bag_24"/>
+        android:src="@drawable/ic_outline_shopping_cart_24"/>
 
     <TextView
         android:id="@+id/cart_badge"

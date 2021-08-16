@@ -1,43 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="100dp"
+    android:layout_height="115dp"
+    android:layout_marginLeft="8dp"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/linear"
-        android:layout_width="78dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
-        android:background="@drawable/rectangle_filed"
-        android:backgroundTint="#F1E9C4"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cornor_radius"
         android:orientation="vertical"
         android:tag="Mobiles">
 
 
         <ImageView
             android:id="@+id/image"
-            android:layout_width="60dp"
-            android:layout_height="65dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/mobile" />
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|bottom"
-            android:layout_weight="1"
-            android:background="@drawable/rectangle_filed"
-            android:backgroundTint="#FBE584"
-            android:fontFamily="@font/sans_bold"
-            android:gravity="center"
-            android:minLines="2"
-            android:text="Mobiles"
-            android:textColor="@color/black"
-            android:textSize="12dp" />
 
     </LinearLayout>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sans_bold"
+        android:maxLines="2"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:text="Mobiles"
+        android:textColor="@color/black"
+        android:textSize="12dp" />
 </LinearLayout>

@@ -71,46 +71,6 @@
                         android:visibility="visible"
                         tools:text="11" />
                 </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="top|end"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="43dp"
-                    android:background="@drawable/cricle_trans_back"
-                    android:visibility="gone">
-
-                    <ImageView
-                        android:id="@+id/wishlist"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="left|center"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="start"
-                        android:src="@drawable/ic_baseline_favorite_border_24"
-                        android:text="Basket"
-                        app:tint="#6C6B6B" />
-
-                    <TextView
-                        android:id="@+id/wishlistBadge"
-                        android:layout_width="16dp"
-                        android:layout_height="17dp"
-                        android:layout_gravity="center|left"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@drawable/badge"
-                        android:backgroundTint="@color/colorAccent"
-                        android:gravity="center"
-                        android:textColor="@android:color/white"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
-                        android:visibility="gone"
-                        tools:text="11" />
-                </FrameLayout>
-
                 <LinearLayout
                     android:id="@+id/share"
                     android:layout_width="35dp"

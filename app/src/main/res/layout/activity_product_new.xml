@@ -48,7 +48,7 @@
                     android:fontFamily="@font/sans"
                     android:includeFontPadding="false"
                     android:padding="0dp"
-                    android:text="YALU MOBILES"
+                    android:text="@string/app_name_home"
                     android:textColor="@color/white"
                     android:textSize="23dp" />
 
@@ -106,6 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
+                    android:visibility="gone"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="15dp"
                     android:scrollbars="horizontal" />

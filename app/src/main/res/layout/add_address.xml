@@ -8,7 +8,7 @@
     android:background="#FAF9F9"
     android:layout_marginTop="10dp"
     android:orientation="vertical"
-    tools:context="pro.network.yalu.MainActivity">
+    tools:context="pro.network.madina.MainActivity">
 
     <LinearLayout
         android:id="@+id/ll1"
