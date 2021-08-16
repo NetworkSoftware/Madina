@@ -51,7 +51,7 @@
     <style name="AppThemeNowhitemain" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorPrimary</item>
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowLightStatusBar">false</item>
@@ -123,9 +123,6 @@
         <item name="colorAccent">@color/colorAccent</item><!-- change the checkbox color -->
         <item name="colorButtonNormal">#009688</item><!-- button color-->
         <item name="android:actionMenuTextColor">@color/white</item>
-        <!-- <item name="navigationBarColor">#000000</item> navigationBar which is in below ie back,list,home button
-             <item name="textColorPrimary"></item> primary text color which includes menu bar text also
-             <item name="android:windowBackground"></item> which change the color of the background   -->
 
     </style>
     <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
